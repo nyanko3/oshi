@@ -1,78 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>タイトル</title> <!--タイトルを入れる-->
-        <style>
-            body{
-                margin: 0 auto;
-            }
-            
-            wrapper{
-                margin: 0;
-                padding: 3px;
-                border: solid 3px #ccc;
-            }
-            
-            nav{
-                width: 100%;
-                height: 70px;
-                background-color: dimgray;
-                padding-top: 5px;
-                box-sizing: border-box;
-            }
-            
-            ul{
-                display: flex;
-            }
-            
-            li{
-                list-style: none;
-            }
-            
-            a{
-                display: block;
-                text-decoration: none;
-                color: white;
-                margin-right: 35px;
-            }
-            
-            #main{
-                background-color: #fefefe;
-            }
-            
-        </style>
-                <script src="/js/utils/utils.js"></script>
-        <script>
-            var doc = document;
-            
-            function getElm(id){
-                return doc.getElementById(id)
-            }
-            
-            function check(){
-                if(getElm('check').value == 'pass'){ <!--パスワードを入れる-->
-                    getElm('result').textContent = '正解';
-                    doc.cookie = 'yuki=True; path=/;';
-                    location.replace('/')
-                }else{
-                    getElm('result').textContent = '不正解';
-                }
-                return
-            }
-        </script>
-    </head>
-    <body>
-        <div id="wrapper">
-            
-            <div id="header">
-                <!--好きな文を入れよう-->
-                <!--<a href="/nyanko_a/link/"></a> サイト集やチャトワへのリンク-->
-                <input id="check" type="text">
-                <input type="button" onclick="check()" value="Check">
-                <div id="result"></div>
+<head>
+    <meta charset='utf-8'>
+    <title>東方の常識問題</title>
+    <script>function getlevel(){
+        if(document.getElementById('word').value == "フランドールスカーレット"){document.cookie = "yuki=True; path=/;";}else{
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", function(){document.getElementById('info').textContent = this.responseText});
+        req.open("GET", "/answer?q="+document.getElementById('word').value);
+        req.send();}
+    }</script>
+</head><div style="text-align: center" >
+<body>
+   簡単な東方の問題です。<br>
+   答えを白い枠に記入して、枠の右にある確認ボタンを押してください。<br>
+   2022年の人気投票1位、2023年3位、2024年3位のキャラは？<br>
+   ヒント:7月4日
+   わかるよね？<br>
+　　間違えるわけないよね？<br>
+<input id="word" type="text"><input type="button" onClick="getlevel()" value="確認">
+</div>
+    <div id="info">
+       <div style="text-align: right">
+            <div style="opacity:0.2">
+            ※無断転載禁止
             </div>
-            
         </div>
-    </body>
+        </div>
+</div>
+</body>
 </html>
