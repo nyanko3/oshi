@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <title>東方の常識問題</title>
-    <script>function getlevel(){
-        if(document.getElementById('word').value == "フランドールスカーレット"){document.cookie = "yuki=True; path=/;";}else{
-        let req = new XMLHttpRequest();
-        req.addEventListener("load", function(){document.getElementById('info').textContent = this.responseText});
-        req.open("GET", "/answer?q="+document.getElementById('word').value);
-        req.send();}
-    }</script>
-</head><div style="text-align: center" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>僕の推し紹介</title>
+</head>
 <body>
-   簡単な東方の問題です。<br>
-   答えを白い枠に記入して、枠の右にある確認ボタンを押してください。<br>
-   2022年の人気投票1位、2023年3位、2024年3位のキャラは？<br>
-   ヒント:7月4日
-   わかるよね？<br>
-　　間違えるわけないよね？<br>
-<input id="word" type="text"><input type="button" onClick="getlevel()" value="確認">
-</div>
-    <div id="info">
-       <div style="text-align: right">
-            <div style="opacity:0.2">
-            ※無断転載禁止
-            </div>
-        </div>
-        </div>
-</div>
+    <div style="text-align: center">
+        <a href="/nyanko_a/furan">
+            <image src="https://raw.githubusercontent.com/nyanko3/gazouokiba/main/furan7.png" width="30%" height="30%"></image>
+        </a>
+        <a href="/nyanko_a/koishi">
+            <image src="https://raw.githubusercontent.com/nyanko3/gazouokiba/main/koishi.png" width="30%" height="30%"></image>
+        </a>
+        <a href="/nyanko_a/kokoro">
+            <image src="https://raw.githubusercontent.com/nyanko3/gazouokiba/main/kokoro.png" width="30%" height="30%"></image>
+        </a>
+    </div>
 </body>
 </html>
