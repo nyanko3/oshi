@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charser="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>こいし可愛い！</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center;">
+    <image src="https://raw.githubusercontent.com/nyanko3/gazouokiba/main/koishi.png" width="14%"></image>
+    <image src="https://raw.githubusercontent.com/nyanko3/gazouokiba/main/koishi2.png" width="14%"></image>
+    <image src="https://raw.githubusercontent.com/nyanko3/gazouokiba/main/koishi3.png" width="14%"></image>
+    <image src="https://raw.githubusercontent.com/nyanko3/gazouokiba/main/koishi4.png" width="14%"></image>
+    <div id="koishi">こいしかわいいよね！</div>
+    </div>
+    <script>
+      $("#koishi").click(function() {
+				document.cookie = "yuki=True; max-age=3156000; path=/";
+				var samui = window.location.pathname;
+				var hima = samui.replace("/nyanko_a/koishi","");
+				window.location.pathname = hima;
+			});
+    </script>
+  </body>
+</html>
